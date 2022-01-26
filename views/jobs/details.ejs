@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate') %>
+<style>
+    h1{
+        text-align: center;
+    }
+    body {
+    
+    background-color: #eeeeee;
+} 
+</style>
+
+<% if(count >= 4) { %>
+    <div class="alert alert-success" role="alert">
+        Congratulations!!! You scored <%= count %>. You can apply.
+       
+    </div>
+    <br>
+    <% }else { %>
+    
+        <div class="alert alert-danger" role="alert">
+            Sorry!!! You can't apply. Your score is less <%= (count) %>.
+        </div>
+        <br>
+    <% } %>
+    <div class="row">
+        <div class="col-6 offset-3">
+
+            <div class="card" mb-3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: #4a65ef;"><%= job.company %></h3>
+                            
+                            <p class="card-text"><b>Designation:</b>  <%= job.position %></p>
+                            <p class="card-text"><b>Salary(LPA):</b>  <%= job.salary %></p>
+                            <p class="card-text"><b>Vacancy:</b>  <%= job.vacancy %></p>
+                            <p class="card-text"><b>Requirements:</b>  <%= job.reruirement %></p>
+                            <% if(count >= 4) { %>
+                                <a href="/apply">
+                                    <button class=" btn btn-dark">Apply</button>
+                                </a>
+                                <% }else { %>
+                                
+                                    <a href="/apply">
+                                        <button class="disabled btn btn-dark">Apply</button>
+                                    </a>
+                                <% } %>
+                        
+                            
+                            <!-- <br> -->
+                            <a href=" /givetest/<%= id %>  ">
+                                <button class="btn btn-dark">Give test</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        </div>
+    </div>
+
+    
+
+    
+    
+
+    

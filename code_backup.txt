@@ -1,0 +1,9 @@
+app.get('/jobs/:id/givetest', (req, res) => {
+    res.render('jobs/givetest');
+})
+
+
+
+<a href="/jobs/<%= id %> /givetest">
+        <button class="btn btn-dark">Give test</button>
+    </a>
